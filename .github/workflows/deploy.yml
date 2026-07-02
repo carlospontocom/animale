@@ -3,7 +3,7 @@ name: Deploy para o Firebase Hosting
 on:
   push:
     branches:
-      - main  # Dispara o robô toda vez que você der 'git push origin main'
+      - main # Dispara o robô toda vez que você der 'git push origin main'
 
 jobs:
   build_and_deploy:
@@ -16,8 +16,8 @@ jobs:
       - name: Configurar o Node.js
         uses: actions/setup-node@v4
         with:
-          node-node: 20
-          cache: 'yarn' # Otimiza o cache usando o Yarn
+          node-version: 20 # Ajustado aqui (era node-node)
+          cache: 'yarn'
 
       - name: Instalar dependências e fazer o Build
         run: |
@@ -32,6 +32,6 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_TOKEN }}' # Usa o token que geramos
+          firebaseToken: '${{ secrets.FIREBASE_TOKEN }}' # Mudado de firebaseServiceAccount para firebaseToken
           projectId: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
-          channelId: live # Envia direto para o site oficial (animale.web.app)
+          channelId: live
