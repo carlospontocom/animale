@@ -1,10 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h1>You did it!</h1>
+  <h1>Bem-vindo</h1>
   <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
+   Sistema em criação do zero com Vue 3, Firebase e IA
   </p>
 </template>
 
