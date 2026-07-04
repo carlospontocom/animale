@@ -1,10 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import './App.css'
+import ModeloDeUsar from './components/ModeloDeUsar.vue'
+</script>
 
 <template>
-  <h1>Bem-vindo</h1>
-  <p>Sistema em criação do zero com Vue 3, Firebase e IA</p>
-  <p>Criando aplicações com vue de forma reaproveitável</p>
-  <p> Variáveis de ambiente configuradas melhor </p>
+  <ModeloDeUsar />
 </template>
 
-<style scoped></style>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
